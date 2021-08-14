@@ -2,6 +2,7 @@
 
 namespace Demo_var_constants
 {
+    //to run the program use ctrl f5
     class Program
     {
         static void Main(string[] args)
@@ -19,7 +20,7 @@ namespace Demo_var_constants
             var Price = 20.95f;  //remember the f
             var chara = 'A';
             var name = "Amy";
-            var working = false;
+            var working = false;  //use control click when on top of var to get info about it
 
 
             Console.WriteLine(number);
@@ -36,6 +37,15 @@ namespace Demo_var_constants
             Console.WriteLine(chara);
             Console.WriteLine(name);
             Console.WriteLine(working);
+
+            //0- first arg (byte.MinValue) 1- second arg (byte.MaxValue)
+            Console.WriteLine("{0} {1}", byte.MinValue, byte.MaxValue);
+            // use ctrl x to delete a line
+            Console.WriteLine("{0} {1}", float.MinValue, float.MaxValue);
+
+            // constant with const key word
+            const float Pi = 3.14f;
+
         }
     }
 }
