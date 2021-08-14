@@ -46,6 +46,46 @@ namespace Demo_var_constants
             // constant with const key word
             const float Pi = 3.14f;
 
+            //Type Conversion
+
+            byte b = 1; //only takes one byte
+            int i = b; //int takes four and a byte can be converted, because of no data loss
+            Console.WriteLine(i);
+
+            int r = 1;
+            // couldn't use byte y = r; 
+            byte y = (byte) r;
+            Console.WriteLine(y);
+
+            //converting non-compatible types
+            string convertNumber = "1234";
+            int numb = Convert.ToInt32(convertNumber);
+            Console.WriteLine(numb);
+
+            //type try and tab twice 
+            try
+            {
+                var byteNum = "1234";
+                byte bn = Convert.ToByte(byteNum); //byte is not larger enough and will crash the system
+                Console.WriteLine(bn);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("The number could not be converted to a byte.");
+              
+            }
+
+            try
+            {
+                string strTrue = "true";
+                bool tf = Convert.ToBoolean(strTrue);
+                Console.WriteLine(tf);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("This couldn't be converted to a True or False");                
+            }
+
         }
     }
 }
