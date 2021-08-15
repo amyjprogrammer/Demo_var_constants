@@ -86,6 +86,40 @@ namespace Demo_var_constants
                 Console.WriteLine("This couldn't be converted to a True or False");                
             }
 
+            //difference of prefix increment or post fix increment
+            int a = 1;
+            int c = a++;
+            Console.WriteLine(c); //c is one, because it is a post fix
+            Console.WriteLine(a);// a is two
+
+            //prefix demo
+            int h = 1;
+            int j = ++h;
+            Console.WriteLine(h);// both are now two, because the ++ are before 
+            Console.WriteLine(j);
+
+            //Operators
+
+            var t = 10;
+            var s = 3;
+            var u = 2;
+            Console.WriteLine(s + t); //comes out to 13
+            Console.WriteLine(t / s);// comes out to 3, becuase they are both integers
+            Console.WriteLine((float)t / (float)s);// comes out to 3.33333
+            Console.WriteLine(t + s * u);//comes out to 16
+            Console.WriteLine((t + s) * u);//comes out to 26
+            Console.WriteLine(t > s); //comes out as a boolean value- true
+            Console.WriteLine(t == s);// also comes out as a boolean value- false
+            Console.WriteLine(t != s);//also bool value- true
+            Console.WriteLine(t > s && t > u);//&& operator (both must be true to be true)
+            Console.WriteLine(t > s || t < u);// || operator (one must be true to be true)
+
+            //Comments :)
+            // if single line is //
+            /*
+             Multi-line comment
+            */ 
+
         }
     }
 }
