@@ -30,6 +30,7 @@ namespace Demo_var_constants
             Console.WriteLine(firstName);
             Console.WriteLine(isWorking);
             
+
             //printing the var (produced the same results
             Console.WriteLine(num);
             Console.WriteLine(counting);
@@ -113,13 +114,46 @@ namespace Demo_var_constants
             Console.WriteLine(t != s);//also bool value- true
             Console.WriteLine(t > s && t > u);//&& operator (both must be true to be true)
             Console.WriteLine(t > s || t < u);// || operator (one must be true to be true)
+            Console.WriteLine(t % 3);//will be 1, because that is the remainder after dividing the numbers
+
+            int num1 = 10;
+            num1 += 100;// also -=, /=, *=
+            Console.WriteLine(num);//will be 110
+
+            num1++;
+            Console.WriteLine(num1);//add the 1 so the value is 111
 
             //Comments :)
             // if single line is //
             /*
              Multi-line comment
-            */ 
+            */
 
+            //Casting
+            Console.WriteLine((int)3.14);// shows as 3 and will convert to int
+            Console.WriteLine((double)3);//also 3, but will now be a double
+
+            int intFromString = Convert.ToInt32("50"); //from string to int
+            double doubleFromString = Convert.ToDouble("50.99"); //from string to double
+
+            Console.WriteLine(100 + intFromString); // is 150
+            Console.WriteLine(100 + doubleFromString);//is 150.99
+
+            //Strings
+
+            string greeting = "Hello"; //indexes of 01234, starts from 0
+
+            Console.WriteLine(greeting.Length);// shows 5
+            Console.WriteLine(greeting[0]); // H
+            Console.WriteLine(greeting.IndexOf("llo")); //2, because it starts at index 2
+            Console.WriteLine(greeting.IndexOf("z"));//-1, because not found in the string
+            Console.WriteLine(greeting.Substring(2));//ll0, starts at index 2 to the end
+            Console.WriteLine(greeting.Substring(1, 3));//ell, starts at index 1 and stops at index 3
+
+            //Math Method
+            Console.WriteLine(Math.Pow(2, 3));//2 to the power of 3 which is 8
+            Console.WriteLine(Math.Sqrt(144));//square root of 144 is 12
+            Console.WriteLine(Math.Round(2.7));//rounding the number which is 3
         }
     }
 }
