@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Demo_var_constants
 {
@@ -154,6 +155,44 @@ namespace Demo_var_constants
             Console.WriteLine(Math.Pow(2, 3));//2 to the power of 3 which is 8
             Console.WriteLine(Math.Sqrt(144));//square root of 144 is 12
             Console.WriteLine(Math.Round(2.7));//rounding the number which is 3
+
+            //Arrays
+
+            int[] luckyNumbers = { 4, 8, 15, 16, 23, 42 };
+            luckyNumbers[0] = 90; //changes the 4 to 90;
+            Console.WriteLine(luckyNumbers[0]); //90
+            Console.WriteLine(luckyNumbers[1]); //8
+            Console.WriteLine(luckyNumbers.Length);//6
+
+            int[] luckyNum = new int[10]; //specifies the length of the array, but doesn't add any values
+            luckyNum[0] = 90; //adds 90 as the first in the array
+            Console.WriteLine(luckyNum[0]);//90
+            Console.WriteLine(luckyNum[1]);//no second number listed so the value is 0
+            Console.WriteLine(luckyNum.Length);//10, because that is the length specified when it was initialized
+
+            //multiple dimensional arrays
+            int[][] numberGrid = { new int[] { 1, 2 }, new int[] { 3, 4 } };
+            numberGrid[0][1] = 99; //replacing the 2 above
+
+            Console.WriteLine(numberGrid[0][1]);//99 as shown above
+            Console.WriteLine(numberGrid[0][0]);//1, because it is the first new int and the firt number in new int
+
+            //Array List
+            //had to add using System.Collections above to use this
+            ArrayList friends = new ArrayList();
+            friends.Add("Oscar");
+            friends.Add("Angela");
+            friends.Add("Kevin");
+
+            Console.WriteLine(friends[0]);//Oscar
+            Console.WriteLine(friends[1]);//Angela
+            Console.WriteLine(friends.Contains("Oscar"));//True
+            Console.WriteLine(friends.Count);//3
+
+            friends.Remove("Oscar");//removes Oscar from the Array List
+            Console.WriteLine(friends.Count);//now it is 2
+
+
         }
     }
 }
